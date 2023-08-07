@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
-function App() {
+import CompanyRegistration from './CompanyRegistration';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      {/* color:'#006ba1' */}
+      <AppBar elevation={1} sx={{ backgroundColor:'#1DA1F2', height:'120px' }} position='relative'>
+        <Toolbar sx={{ display:'flex', flexDirection:'column', justifyContent:'space-around', padding:'20px' }}>
+        <Typography variant="h5" component="div" sx={{ textAlign:'center', fontWeight:500  }}>
+            The Federal Democratic Republic of Ethiopia
+          </Typography>
+          <Typography variant="h6" component="div" sx={{ textAlign:'center' }}>
+            Ministry of Innovation and Technology
+          </Typography>
+        </Toolbar>
+      </AppBar>
+
+     <CompanyRegistration />
+    </Box>
   );
 }
-
-export default App;
